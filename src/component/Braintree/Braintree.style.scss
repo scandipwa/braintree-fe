@@ -1,0 +1,39 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/braintree-graphql
+ * @link https://github.com/scandipwa/braintree-graphql
+ */
+
+.Braintree {
+    margin-top: 2.4rem;
+
+    @include mobile {
+        margin-top: 2.8rem;
+    }
+
+    &-Form {
+        min-height: 200px;
+        border-radius: 5px;
+    }
+
+    &-Checkbox {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        right: 1.2rem;
+
+        .Field-Label {
+            padding-top: .4rem;
+            margin-left: .95rem
+        }
+    }
+
+    .braintree-placeholder {
+        display: none;
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "braintree-graphql",
+    "version": "0.0.0",
+    "license": "OSL-3.0",
+    "dependencies": {
+        "braintree-web-drop-in": "^1.23.0"
+    },
+    "scandipwa": {
+        "type": "extension"
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa"
+    },
+    "files": [
+        "src"
+    ]
+}
