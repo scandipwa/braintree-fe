@@ -20,8 +20,8 @@ import { BRAINTREE_CONTAINER_ID } from './Braintree.config';
 
 import './Braintree.style';
 
-/** @namespace BraintreeGraphQl/Component/Braintree/Component/Braintree */
-export class Braintree extends PureComponent {
+/** @namespace BraintreeGraphql/Component/Braintree/Component/BraintreeComponent */
+export class BraintreeComponent extends PureComponent {
     static propTypes = {
         init: PropTypes.func.isRequired,
         onPaymentSavedInVaultChange: PropTypes.func.isRequired,
@@ -29,10 +29,13 @@ export class Braintree extends PureComponent {
         isVaultActive: PropTypes.bool
     };
 
-    state = {
-        isLoading: true,
+    static defaultProps = {
         isSavePayment: false,
         isVaultActive: false
+    };
+
+    state = {
+        isLoading: true
     };
 
     // eslint-disable-next-line @scandipwa/scandipwa-guidelines/only-render-in-component
@@ -40,7 +43,7 @@ export class Braintree extends PureComponent {
         const { init } = this.props;
 
         init().then(
-            /** @namespace BraintreeGraphQl/Component/Braintree/Component/init/then */
+            /** @namespace BraintreeGraphql/Component/Braintree/Component/init/then */
             () => this.setState({ isLoading: false })
         );
     }
@@ -88,4 +91,4 @@ export class Braintree extends PureComponent {
     }
 }
 
-export default Braintree;
+export default BraintreeComponent;
