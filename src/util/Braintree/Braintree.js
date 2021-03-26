@@ -12,7 +12,7 @@
 import { Field } from 'Util/Query';
 import { fetchMutation, fetchQuery } from 'Util/Request';
 
-/** @namespace BraintreeGraphql/Util/Braintree */
+/** @namespace BraintreeGraphql/Util/Braintree/Braintree */
 export class Braintree {
     isLoading = false;
 
@@ -40,7 +40,7 @@ export class Braintree {
     requestBraintreeConfig() {
         const query = new Field('getBraintreeConfig').addFieldList(['is_three_d_secure']);
         return fetchQuery(query).then(
-            /** @namespace Braintree/Util/Braintree/fetchQuery/then */
+            /** @namespace BraintreeGraphql/Util/Braintree/fetchQuery/then */
             ({ getBraintreeConfig }) => getBraintreeConfig
         );
     }
@@ -48,7 +48,7 @@ export class Braintree {
     requestBraintreeClientToken() {
         const mutation = (new Field('createBraintreeClientToken')).setAlias('token');
         return fetchMutation(mutation).then(
-            /** @namespace Braintree/Util/Braintree/fetchMutation/then */
+            /** @namespace BraintreeGraphql/Util/Braintree/fetchMutation/then */
             ({ token }) => token
         );
     }
